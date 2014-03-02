@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch
 
 PRODUCT_PACKAGES += \
+    bootanimation.zip \
     CellBroadcastReceiver
 
 # Additional tools

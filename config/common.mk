@@ -1,9 +1,5 @@
 PRODUCT_BRAND ?= omni
 
-# bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
-
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
@@ -52,10 +48,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Additional packages
--include vendor/omni/config/packages.mk
+include vendor/omni/config/packages.mk
 
 # Versioning
--include vendor/omni/config/version.mk
+include vendor/omni/config/version.mk
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
