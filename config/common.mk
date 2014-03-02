@@ -1,8 +1,11 @@
 PRODUCT_BRAND ?= omni
 
 # bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+BOOTANIMATION_NAME := bootanimation.zip
+ifneq ($(filter ldpi mdpi, $(PRODUCT_AAPT_PREF_CONFIG)),)
+BOOTANIMATION_NAME := bootanimation_$(PRODUCT_AAPT_PREF_CONFIG).zip
+endif
+PRODUCT_COPY_FILES += vendor/omni/prebuilt/bootanimation/$(BOOTANIMATION_NAME):system/media/bootanimation.zip
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
