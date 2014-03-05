@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- URL base to find .delta files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
+    <string name="url_base_delta">http://jenkins.androidarmv6.org:9090/nightlies/%s/</string>
+
+    <!-- URL base to find .update and .sign files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
+    <string name="url_base_update">http://jenkins.androidarmv6.org:9090/nightlies/%s/</string>
+
+    <!-- URL base to find the full zip files, %s is expanded to property_device value. Path is suffixed by (expanded) filename_base -->
+    <string name="url_base_full">http://jenkins.androidarmv6.org:9091/%s/</string>
+</resources>
